@@ -1,0 +1,23 @@
+{
+  "name": "uncfsu-csc322-finalproject",
+  "version": "1.0.0",
+  "description": "There will be no final examination in this course. The course project is therefore an important requirement; and it counts \r 30% towards your final grade.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josev814/UNCFSU-CSC322.git"
+  },
+  "author": "Bryce Herring, Stathis Jones and Jose' Vargas",
+  "license": "Apache2",
+  "bugs": {
+    "url": "https://github.com/josev814/UNCFSU-CSC322/issues"
+  },
+  "homepage": "https://github.com/josev814/UNCFSU-CSC322#readme",
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
