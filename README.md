@@ -1,3 +1,27 @@
+# Table of Contents
+I. [Introduction] (#introduction)
+
+II. [About the Project] (#about-the-project)
+
+III. [Group Sign up] (#group-sign-up)
+
+IV. [Programming] (#programming)
+- [General Requirements] (#general-requirements)
+- [Operational Requirements] (#operational-requirements)
+
+V. [Mid-Project Consultation] (#mid-project-consultation)
+
+VI . [Communication Evidence] (#communication-evidence)
+
+VII. [Final Report] (#final-report)
+
+VIII. [Presentation and Demonstration] (presentation-and-demonstration)
+
+IX. [Evaluation] (#evaluation)
+
+X. [Setup] (#setup)
+XI. [Code Linting] (#code-linting)
+
 # I. Introduction
 There will be no final examination in this course. The course project is therefore an important requirement; and it counts 
 30% towards your final grade.
@@ -163,3 +187,22 @@ without actually executing the code.
 features and correctness of your code (operational requirements R4 to R7).
 - Communication Evidence – 5 points – graded based on how strong the evidence about the teamwork that have 
 been carried on within the team throughout the timespan of the project.
+
+
+# Setup
+Install nodejs >= 18.x (https://nodejs.org/en/download/)
+
+Install required packages using npm.  Make sure to cd to the directory this application is in prior to npm install
+
+via Powershell:
+```
+npm install
+```
+
+# Code Linting
+This is done on the terminal using npx
+
+Powershell example:
+```
+npx eslint your_file_to_lint.js
+```
