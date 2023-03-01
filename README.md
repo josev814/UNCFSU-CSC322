@@ -21,6 +21,7 @@ IX. [Evaluation] (#evaluation)
 
 X. [Setup] (#setup)
 XI. [Code Linting] (#code-linting)
+XI. [Running the Test] (#running-the-test)
 
 # I. Introduction
 There will be no final examination in this course. The course project is therefore an important requirement; and it counts 
@@ -205,4 +206,14 @@ This is done on the terminal using npx
 Powershell example:
 ```
 npx eslint your_file_to_lint.js
+```
+
+# Running the test
+This is done on the terminal using node
+
+--data-file is the input file that we are going to process
+
+Powershell example:
+```
+node index.js --data-file data.txt
 ```
