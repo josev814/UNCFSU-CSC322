@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style = "margin: 30px;">
+
+<div id="input" style="font-family: 'Arial';">
+Number: <input type="text" id="number" onkeypress="keyPress(event);">
+<button onclick="goldbach()">submit</button> 
+</div>
+<pre id="output" style = "font-family:'Arial';"></pre>
+
+<script type="text/javascript">
+	function goldbach() {
+	// get input
+    var n = document.getElementById("number").value;
+    // validate input
+
+    if (n != parseInt(n) || n <= 2 || n % 2 != 0) {
+        alert("Invalid input! Enter even integer greater than 2.");
+    } else {
+        var output = document.getElementById("output");
+        /*
+          generate all primes below (or equal to) input number (sieve of eratosthenes);
+          return array of those primes;
+        */
+        function getPrimes(n) {
+            var sieve = [],
+                i, j, primes = [];
+            for (i = 2; i <= n; ++i) {
+                if (!sieve[i]) {
+                    primes.push(i);
+                    for (j = i << 1; j <= n; j += i) {
+                        sieve[j] = true;
+                    }
+                }
+            }
+            return primes;
+        }
+        // generate array of all possible tupples
+        var count = 0
+        var primes = getPrimes(n);
+        var tupples = new Array();
+        var len = primes.length;
+        for (i = 0; i < len; i++) {
+            for (j = len - 1; j >= i; j--) {
+                if (primes[i] + primes[j] == n) {
+                    tupples.push(primes[i] + " + " + primes[j]);
+                    count += 1
+                    break;
+                }
+            }
+            if (primes[i] + primes[j] === n) {
+                break;
+            }
+        }
+        var index = 0
+        output.innerHTML = "We found " + count +  " Goldback pair(s) for " + n + ".<br>";
+        while (index < count){
+            
+            output.innerHTML += n + " = " + tupples[index] + "<br>";
+            index++;
+
+        }
+        
+        
+        
+        //+ n + " = " + tupples[1];
+        
+        
+
+    };
+}
+//allow input submit by pressing 'ENTER' (keyCode = 13)
+function keyPress(e) {
+    if (typeof e == 'undefined' && window.event) {
+        e = window.event;
+    }
+    if (e.keyCode == 13) {
+        goldbach();
+    }
+}
+</script>
+</body>
+</html>
