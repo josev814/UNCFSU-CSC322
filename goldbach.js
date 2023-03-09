@@ -25,6 +25,7 @@ class goldbachFormulas {
   run_process() {
     console.log('Call other goldbach methods against ' + this.__max_number +
         ' and output the result');
+    this.__goldbach_formula();
   }
 
   /**
@@ -59,7 +60,7 @@ class goldbachFormulas {
     // reference this.__max_number
     count;
     let count = 0;
-    const primes = __get_primes(this.__max_number);
+    const primes = this.__get_primes(this.__max_number);
     const tupples = [];
     const len = primes.length;
 
@@ -67,7 +68,7 @@ class goldbachFormulas {
       for (j = len - 1; j >= i; j--) {
         if (primes[i] + primes[j] == n) {
           tupples.push(primes[i] + ' + ' + primes[j]);
-          count += 1;
+          count ++;
           break;
         }
       }
