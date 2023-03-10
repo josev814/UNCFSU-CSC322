@@ -55,7 +55,13 @@ function main() {
           // Run goldbach here
           let max_int = Number(processNum.trim())
           gbf.set_max_number(max_int)
-          gbf.run_process();
+          let tupples = gbf.run_process();
+          //console.log(max_int + ": " + tupples);
+          let index = 0;
+          while (index < tupples.length){
+            console.log(max_int + ": " + tupples[index]);
+            index++;
+          }
         });
       });
     }
