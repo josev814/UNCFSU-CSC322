@@ -30,19 +30,19 @@ class goldbachFormulas {
   /**
    * @property {Function} __get_primes executes the goldbach formulas in the
    *           class
-   *  @param {int} n is prime reference
+   * 
    *  @return {int} primes
    */
-  __get_primes(n) {
+  __get_primes() {
     // reference this.__max_number
     const x = [];
     let i = 0;
     let j = 0;
     const primes = [];
-    for (i = 2; i <= n; ++i) {
+    for (i = 2; i <= this.__max_number; ++i) {
       if (!x[i]) {
         primes.push(i);
-        for (j = i << 1; j <= n; j += i) {
+        for (j = i << 1; j <= this.__max_number; j += i) {
           x[j] = true;
         }
       }
@@ -60,7 +60,7 @@ class goldbachFormulas {
   __goldbach_formula() {
     // reference this.__max_number
 
-    const primes = this.__get_primes(this.__max_number);
+    const primes = this.__get_primes();
     //  console.log(primes)
     const tupples = [];
     const len = primes.length;
@@ -70,7 +70,7 @@ class goldbachFormulas {
         //  console.log(j)
         // console.log(primes[i] + ": " + primes[j]);
         if (primes[i] + primes[j] == this.__max_number) {
-          tupples.push(primes[i] + ' + ' + primes[j]);
+          tupples.push([primes[i],primes[j]]);
           //  console.log(tupples);
           //  count++;
           //  console.log(j)
