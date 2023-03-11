@@ -48,14 +48,31 @@ function main() {
 
       // reading the file with without a lock file async readfile
       fs.readFile(cliArgs['data_file'], 'utf8', function(error, data) {
-        if(error){
+        if (error) {
           throw error;
         }
+        let x = maxInt = 0;
+        let tupples = [];
         data.split('\n').forEach((processNum) => {
           // Run goldbach here
-          let max_int = Number(processNum.trim())
-          gbf.set_max_number(max_int)
-          gbf.run_process();
+          if (processNum == '') { // ignores an empty line
+            return;
+          }
+          maxInt = Number(processNum.trim());
+          gbf.set_max_number(maxInt);
+          tupples = gbf.run_process();
+          x = tupples.length;
+          console.log('We found %i Goldbach pair(s) for %i', x, maxInt);
+          let index = 0;
+          while (index < x) {
+            console.log(
+                '%i = %i + %i',
+                maxInt,
+                tupples[index][0],
+                tupples[index][1],
+            );
+            index++;
+          }
         });
       });
     }
