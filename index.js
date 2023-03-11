@@ -59,10 +59,9 @@ function main() {
           let max_int = Number(processNum.trim());
           gbf.set_max_number(max_int);
           let tupples = gbf.run_process();
-          console.log('%i = %i + %i', max_int, tupples[index][0], tupples[index][1]);
           let index = 0;
           while (index < tupples.length) {
-            console.log('%i = %i + %i', max_int, tupples[0], tupples[1]);
+            console.log('%i = %i + %i', max_int, tupples[index][0], tupples[index][1]);
             index++;
           }
         });
