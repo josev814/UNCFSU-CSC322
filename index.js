@@ -59,9 +59,11 @@ function main() {
           let max_int = Number(processNum.trim());
           gbf.set_max_number(max_int);
           let tupples = gbf.run_process();
-          console.log('We found %i Goldbach pair(s) for %i', tupples.length, max_int);
+          let x = tupples.length;
+          console.log('We found %i Goldbach pair(s) for %i', x, max_int);
           let index = 0;
-          while (index < tupples.length) {
+          
+          while (index < x) {
             console.log('%i = %i + %i', max_int, tupples[index][0], tupples[index][1]);
             index++;
           }
