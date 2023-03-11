@@ -1,3 +1,4 @@
+[![ESLint](https://github.com/josev814/UNCFSU-CSC322/actions/workflows/eslint.yml/badge.svg)](https://github.com/josev814/UNCFSU-CSC322/actions/workflows/eslint.yml)
 
 # Table of Contents  
 
