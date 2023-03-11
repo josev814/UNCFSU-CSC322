@@ -1,0 +1,17 @@
+
+*/ function getPrimes(n) 
+  checks to see if n is prime by using the isPrime */
+    {{
+    getPrimes(n)
+    expect(isPrime(n)).toBe(true);
+  });
+
+
+
+
+  */    function goldbach()  
+   checks to see if a number is even and greater than 2 */
+  {{
+    godbach(n)
+    expect(n%2=0 && n>2).toBe(true);
+    }};
