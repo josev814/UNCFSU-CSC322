@@ -2,7 +2,7 @@
 */ function getPrimes(n) 
   checks to see if n is prime by using the isPrime */
    
-    getPrimes(n)
+    __get_primes(n)
       expect(isPrime(n)).toBe(true);
   
 
